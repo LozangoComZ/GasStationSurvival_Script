@@ -1,0 +1,22 @@
+15/10
+
+>INTRODUZIR CODIGO FONTE A GITHUB E USAR GIT
+
+Inimigos
+
+> Se adaptar aos pontos de dificuldade
+> Skins alternativas, aleatorias.
+> Dificuldade/Score
+- Alguns inimigos dificeis e outros nem tanto
+- Armas aleatorias
+- Tem que ter relação procedural ao numero da Wave
+
+Boss
+
+> Ele precisa existir
+> Sistema para spawnar ele
+> Sistema de adapção a especialidades
+
+Waves
+
+>Mecanica de progresso automatico
