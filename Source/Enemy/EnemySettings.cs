@@ -31,7 +31,6 @@ namespace GasStationSurvival_Script
                 //Encontra objetos IObjectIPlayerProfileInfo com o CustomID do altProfilesID.
                 List<IObjectPlayerProfileInfo> altProfilesObj = new List<IObjectPlayerProfileInfo>();
                 foreach (string profId in altProfilesID){
-                    Msg(profId);
                     foreach (IObject obj in Game.GetObjectsByCustomID("PP-" + profId)){
                         altProfilesObj.Add((IObjectPlayerProfileInfo)obj);
                     }

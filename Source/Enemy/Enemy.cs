@@ -33,6 +33,7 @@ namespace GasStationSurvival_Script
 
                 Msg(String.Concat("Spawning new enemy. Score: ", score.ToString(), " / Set: ", EnemySet.Name), "SPAWNENEMY");
 
+                //Essa parte parece mal otimizada ->
                 Enemy newEnemy = new Enemy();
                 newEnemy.Settings = EnemySet;
                 newEnemy.ply = newEnemy.Settings.GetSpawn().CreatePlayer();

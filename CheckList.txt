@@ -4,9 +4,8 @@ Inimigos
 
 > Se adaptar aos pontos de dificuldade
 > Dificuldade/Score
-- Alguns inimigos dificeis e outros nem tanto
-- Armas aleatorias
-- Tem que ter relação procedural ao numero da Wave
+- Score é divido entre os inimigos dependente do nivel de distribuição da wave
+- Armas fazer parte do score
 
 Boss
 
