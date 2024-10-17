@@ -31,11 +31,15 @@ namespace GasStationSurvival_Script
                 Vector2 SpawnPoint = SpawnPoints[rnd.Next(0, SpawnPoints.Length)];
                 EnemySettings EnemySet = GetEnemyTemplateByBaseScore(score);
 
-                Msg(String.Concat("Spawning new enemy. Score: ",score.ToString()," / Set: ", EnemySet.Name), "SPAWNENEMY");
+                Msg(String.Concat("Spawning new enemy. Score: ", score.ToString(), " / Set: ", EnemySet.Name), "SPAWNENEMY");
 
                 Enemy newEnemy = new Enemy();
                 newEnemy.Settings = EnemySet;
                 newEnemy.ply = newEnemy.Settings.GetSpawn().CreatePlayer();
+
+                IProfile profile = EnemySet.GetAltProfiles()[rnd.Next(EnemySet.GetAltProfiles().Count)];
+                newEnemy.ply.SetProfile(profile);
+                
                 newEnemy.ply.SetWorldPosition(SpawnPoint);
                 newEnemy.ply.SetCameraSecondaryFocusMode(CameraFocusMode.Ignore);
                 return newEnemy;
@@ -46,16 +50,11 @@ namespace GasStationSurvival_Script
                 if (enemy.Settings == null) return;
 
                 Game.TotalScore += enemy.Settings.BaseScore;
-                Msg("New score: "+Game.TotalScore.ToString(),"ONENEMYDEATH");
+                Msg("New score: " + Game.TotalScore.ToString(), "ONENEMYDEATH");
 
                 WaveManager.TryNextSession();
                 WaveManager.GameOverCheck();
             }
-        }
-
-        public static EnemySettings GetEnemyTemplateByBaseScore(float baseScore)
-        {
-            return EnemySettingsList.OrderBy(x => GetDifference(x.BaseScore, baseScore)).First();
         }
 
         #endregion

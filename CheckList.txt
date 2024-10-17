@@ -1,11 +1,8 @@
-15/10
-
->INTRODUZIR CODIGO FONTE A GITHUB E USAR GIT
+16/10
 
 Inimigos
 
 > Se adaptar aos pontos de dificuldade
-> Skins alternativas, aleatorias.
 > Dificuldade/Score
 - Alguns inimigos dificeis e outros nem tanto
 - Armas aleatorias

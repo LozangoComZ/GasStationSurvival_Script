@@ -10,7 +10,7 @@ namespace GasStationSurvival_Script
         {
             //
 
-            public static WaveSetting Settings = null;
+            public static WaveSetting Settings;
 
             public static int CurrentSessionIndex = -1;
             public static List<Enemy> EnemiesList = new List<Enemy>();           //Todos inimigos em cena & inimigos em cena vivos
