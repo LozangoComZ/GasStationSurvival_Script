@@ -1,10 +1,8 @@
-16/10
+17/10
 
 Inimigos
 
-> Se adaptar aos pontos de dificuldade
 > Dificuldade/Score
-- Score é divido entre os inimigos dependente do nivel de distribuição da wave
 - Armas fazer parte do score
 
 Boss

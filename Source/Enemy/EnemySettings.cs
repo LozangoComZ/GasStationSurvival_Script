@@ -19,7 +19,7 @@ namespace GasStationSurvival_Script
             };
 
             private string name = "Debug";
-            private int baseScore = 100;
+            private int baseScore = 0;
             private List<string> altProfilesID = new List<string>();
 
             public string Name { get { return name; } }

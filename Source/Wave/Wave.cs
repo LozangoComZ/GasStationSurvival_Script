@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SFDGameScriptInterface;
 
@@ -61,19 +62,21 @@ namespace GasStationSurvival_Script
                     return false;
                 }
 
-                LoadCurrentSession();
+                SpawnSessionEnemies();
                 return true;
             }
-            private static void LoadCurrentSession()
+            //Carrega a sessão
+            private static void SpawnSessionEnemies()
             {
+                //Start spawning enemies
                 Msg("Spawning enemy session", "WAVEMANAGER");
 
-                //Spawn enemies
-                int enemysToSpawn = CurrentSession().EnemyUnits;
-                int scorePerEnemy = (int)(CurrentSession().EnemyScore / enemysToSpawn);
-                for (int i = 0; i < enemysToSpawn; i++)
+                int[] ScorePerEnemy = ShareScore(CurrentSession().EnemyUnits,CurrentSession().EnemyScore,CurrentSession().ScoreConcentration,100);
+
+                for (int i = 0; i < CurrentSession().EnemyUnits; i++)
                 {
-                    Wave.EnemiesList.Add(EnemyManager.SpawnEnemy(scorePerEnemy));
+                    //Call spawning order
+                    Wave.EnemiesList.Add(EnemyManager.SpawnEnemy(ScorePerEnemy[i]));
                 }
             }
 
@@ -92,7 +95,6 @@ namespace GasStationSurvival_Script
             public static WaveSetting.Session CurrentSession() { return Wave.Settings.SessionsArray[Wave.CurrentSessionIndex]; }
             #endregion
         }
-
         #endregion
     }
 }

@@ -14,8 +14,7 @@ namespace GasStationSurvival_Script
             {
                 public int EnemyUnits = 0;              //Quantidade de inimigos
                 public int EnemyScore = 0;         //Dificuldade distribuida entre todos os inimigos
-                public int ScoreConcentration = 0;       //Concentração dos pontos nos inimigos. (0 = Distribuido igualmente; 1 = Distribui minimamente)
-                
+                public double ScoreConcentration = 0;       //Concentração dos pontos nos inimigos. (0 = Distribuido igualmente; 1 = Distribui minimamente)
             }
 
             public List<Session> SessionsArray =    //*Será usada de index 0 até o final durante a leitura numa Wave.
@@ -31,51 +30,22 @@ namespace GasStationSurvival_Script
             new WaveSetting(){ //0
                 SessionsArray ={
                     new WaveSetting.Session(){
-                    EnemyUnits=2,
-                    EnemyScore=200,
+                    EnemyUnits=3,
+                    EnemyScore=300,
+                    ScoreConcentration=0
                     },
                     new WaveSetting.Session(){
-                    EnemyUnits=4,
+                    EnemyUnits=5,
                     EnemyScore=500,
+                    ScoreConcentration=0.5
                     },
                     new WaveSetting.Session(){
-                    EnemyUnits=4,
+                    EnemyUnits=5,
                     EnemyScore=500,
+                    ScoreConcentration=1
                     },
                 }
-            }, //Default
-            new WaveSetting(){ //1
-                SessionsArray ={
-                    new WaveSetting.Session(){
-                    EnemyUnits=2,
-                    EnemyScore=200,
-                    },
-                    new WaveSetting.Session(){
-                    EnemyUnits=4,
-                    EnemyScore=500,
-                    },
-                    new WaveSetting.Session(){
-                    EnemyUnits=4,
-                    EnemyScore=500,
-                    },
-                }
-            }, //Default
-            new WaveSetting(){ //2
-                SessionsArray ={
-                    new WaveSetting.Session(){
-                    EnemyUnits=2,
-                    EnemyScore=200,
-                    },
-                    new WaveSetting.Session(){
-                    EnemyUnits=4,
-                    EnemyScore=500,
-                    },
-                    new WaveSetting.Session(){
-                    EnemyUnits=4,
-                    EnemyScore=500,
-                    },
-                }
-            }, //Default
+            },//Default
 
         };
         #endregion
