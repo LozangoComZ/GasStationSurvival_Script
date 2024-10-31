@@ -8,22 +8,18 @@ namespace GasStationSurvival_Script
 {
     public partial class Main : GameScriptInterface
     {
-
-        public class EnemySettings
+        public static readonly List<EnemyConfig> EnemyConfigList = new List<EnemyConfig>(){
+            new EnemyConfig
+            {
+                altProfilesID = { "DefaultMale", "DefaultFemale" }
+            }
+        };
+        public class EnemyConfig
         {
-            public static readonly List<EnemySettings> EnemySettingsList = new List<EnemySettings>(){
-                new EnemySettings
-                {
-                    altProfilesID = { "DefaultMale", "DefaultFemale" }
-                }
-            };
 
-            private string name = "Debug";
-            private int baseScore = 0;
-            private List<string> altProfilesID = new List<string>();
-
-            public string Name { get { return name; } }
-            public int BaseScore { get { return baseScore; } }
+            public string Name = "Debug";
+            public int BaseScore = 0;
+            public List<string> altProfilesID = new List<string>();
 
             public List<IProfile> GetAltProfiles(){
                 if (altProfilesID.Count <= 0) return new List<IProfile>{ new IProfile()};
@@ -40,11 +36,7 @@ namespace GasStationSurvival_Script
                 return altProfilesObj.Select(profObj => profObj.GetProfile()).ToList();
             }
             public IObjectPlayerSpawnTrigger GetSpawn() { return (IObjectPlayerSpawnTrigger)Game.GetObject("PS-" + Name.ToUpper()); }
-        }
 
-        public static EnemySettings GetEnemyTemplateByBaseScore(float baseScore)
-        {
-            return EnemySettings.EnemySettingsList.OrderBy(x => GetDifference(x.BaseScore, baseScore)).First();
         }
     }
 }

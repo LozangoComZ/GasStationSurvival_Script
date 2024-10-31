@@ -9,14 +9,14 @@ namespace GasStationSurvival_Script
     public partial class Main : GameScriptInterface
     {
 
-        public partial class WaveManager
+        public class EnemyScore
         {
             public static int[] ShareScore(int enemyCount, int initScore, double scoreConcentration, int minScorePerIndividual)
             {
                 //Passo 0: Separar o minimo para cada individuo
                 int minScore = 20;
                 int reservedScore = minScore * enemyCount;
-                if (initScore < reservedScore) { Msg("Error: Session has insufficient score", "WAVEMANAGER"); return null; }
+                if (initScore < reservedScore) { Msg("Error: Session has insufficient score", "SHARESCORE"); return null; }
 
                 int score = initScore - reservedScore;
 
@@ -39,6 +39,11 @@ namespace GasStationSurvival_Script
                 }
 
                 return finalScoreList;
+            }
+
+            public static EnemyConfig GetEnemyTemplateByBaseScore(float baseScore)
+            {
+                return EnemyConfigList.OrderBy(x => GetDifference(x.BaseScore, baseScore)).First();
             }
         }
     }

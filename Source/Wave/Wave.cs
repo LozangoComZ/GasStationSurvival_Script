@@ -11,7 +11,7 @@ namespace GasStationSurvival_Script
         {
             //
 
-            public static WaveSetting Settings;
+            public static WaveConfig Settings;
 
             public static int CurrentSessionIndex = -1;
             public static List<Enemy> EnemiesList = new List<Enemy>();           //Todos inimigos em cena & inimigos em cena vivos
@@ -31,7 +31,7 @@ namespace GasStationSurvival_Script
                 Msg("Setting wave", "WAVEMANAGER");
                 if (Wave.Settings != null) { Msg("Already started.", "WAVEMANAGER"); return; }
 
-                Wave.Settings = WaveSettingsList[WAVEINDEX-1];
+                Wave.Settings = WaveConfigList[WAVEINDEX-1];
             }
 
             //Checa se todos os inimigos da onda estão mortos
@@ -71,12 +71,12 @@ namespace GasStationSurvival_Script
                 //Start spawning enemies
                 Msg("Spawning enemy session", "WAVEMANAGER");
 
-                int[] ScorePerEnemy = ShareScore(CurrentSession().EnemyUnits,CurrentSession().EnemyScore,CurrentSession().ScoreConcentration,100);
+                int[] ScorePerEnemy = EnemyScore.ShareScore(CurrentSession().EnemyUnits,CurrentSession().ScorePerEnemy * CurrentSession().EnemyUnits,CurrentSession().ScoreConcentration,100);
 
                 for (int i = 0; i < CurrentSession().EnemyUnits; i++)
                 {
                     //Call spawning order
-                    Wave.EnemiesList.Add(EnemyManager.SpawnEnemy(ScorePerEnemy[i]));
+                    Wave.EnemiesList.Add(EnemySpawn.SpawnEnemy(ScorePerEnemy[i]));
                 }
             }
 
@@ -92,7 +92,7 @@ namespace GasStationSurvival_Script
                 if (Game.GetPlayers().Where(x => x.GetTeam() == PlayerTeam.Team1 && !x.IsDead).ToArray().Length < 1) return true;
                 return false;
             }
-            public static WaveSetting.Session CurrentSession() { return Wave.Settings.SessionsArray[Wave.CurrentSessionIndex]; }
+            public static WaveConfig.Session CurrentSession() { return Wave.Settings.SessionsArray[Wave.CurrentSessionIndex]; }
             #endregion
         }
         #endregion

@@ -23,7 +23,7 @@ namespace GasStationSurvival_Script
 
             //Setup Wave
             WaveManager.ManualSetup(Game.SurvivalWave);
-            EnemyManager.RefreshSpawnPoints();
+            EnemySpawn.RefreshSpawnPoints();
             WaveManager.TryNextSession();
         }
 
@@ -33,7 +33,7 @@ namespace GasStationSurvival_Script
             //Check if is Enemy
             foreach (Enemy e in Wave.EnemiesList.Where(en => en.ply == player))
             {
-                EnemyManager.OnEnemyDeath(e,args);
+                OnEnemyDeath(e,args);
                 return;
             }
             //When it's 'hero'
@@ -42,7 +42,7 @@ namespace GasStationSurvival_Script
 
 
         //Others
-        public static void Msg(string s) { Game.ShowChatMessage("DEBUG: " + s); }
-        public static void Msg(string s, string origin) { Game.ShowChatMessage(origin+": "+s); }
+        public static void Msg(object s) { Game.ShowChatMessage("DEBUG: " + s.ToString()); }
+        public static void Msg(object s, string origin) { Game.ShowChatMessage(origin+": "+s.ToString()); }
     }
 }
