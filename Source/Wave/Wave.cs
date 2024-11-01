@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using SFDGameScriptInterface;
 
 namespace GasStationSurvival_Script
@@ -75,8 +76,11 @@ namespace GasStationSurvival_Script
 
                 for (int i = 0; i < CurrentSession().EnemyUnits; i++)
                 {
-                    //Call spawning order
-                    Wave.EnemiesList.Add(EnemySpawn.SpawnEnemy(ScorePerEnemy[i]));
+                    //Delay compatibility
+                    int scr = ScorePerEnemy[i];
+                    Events.UpdateCallback.Start((float e) => {
+                        Wave.EnemiesList.Add(EnemySpawn.SpawnEnemy(scr));
+                    }, (uint)(600 * (i+1)), 1);
                 }
             }
 

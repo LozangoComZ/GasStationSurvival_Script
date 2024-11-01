@@ -8,26 +8,22 @@ namespace GasStationSurvival_Script
 {
     public partial class Main : GameScriptInterface
     {
-        public static readonly List<EnemyConfig> EnemyConfigList = new List<EnemyConfig>(){
-            new EnemyConfig
-            {
-                altProfilesID = { "DefaultMale", "DefaultFemale" }
-            }
-        };
         public class EnemyConfig
         {
-
+            // ENEMY CORE
             public string Name = "Debug";
             public int BaseScore = 0;
-            public List<string> altProfilesID = new List<string>();
+            public List<string> profilesID = new List<string>();
+            public List<IProfile> GetProfiles()
+            {
+                if (profilesID.Count <= 0) return new List<IProfile> { new IProfile() };
 
-            public List<IProfile> GetAltProfiles(){
-                if (altProfilesID.Count <= 0) return new List<IProfile>{ new IProfile()};
-
-                //Encontra objetos IObjectIPlayerProfileInfo com o CustomID do altProfilesID.
+                //Encontra objetos IObjectIPlayerProfileInfo com o CustomID do profilesID.
                 List<IObjectPlayerProfileInfo> altProfilesObj = new List<IObjectPlayerProfileInfo>();
-                foreach (string profId in altProfilesID){
-                    foreach (IObject obj in Game.GetObjectsByCustomID("PP-" + profId)){
+                foreach (string profId in profilesID)
+                {
+                    foreach (IObject obj in Game.GetObjectsByCustomID("PP-" + profId))
+                    {
                         altProfilesObj.Add((IObjectPlayerProfileInfo)obj);
                     }
                 }
@@ -37,6 +33,23 @@ namespace GasStationSurvival_Script
             }
             public IObjectPlayerSpawnTrigger GetSpawn() { return (IObjectPlayerSpawnTrigger)Game.GetObject("PS-" + Name.ToUpper()); }
 
+
+            // SIMPLE EVENT
+            public Func<Enemy, object> OnSpawn = (Enemy ec) => { return null; };
+
+
+            // MODS
+            //public SortedDictionary
         }
+
+
+        public static readonly List<EnemyConfig> EnemyConfigList = new List<EnemyConfig>(){
+
+            new EnemyConfig
+            {
+                profilesID = { "DefaultMale", "DefaultFemale" },
+
+            }
+        };
     }
 }

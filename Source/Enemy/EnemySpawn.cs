@@ -27,8 +27,10 @@ namespace GasStationSurvival_Script
 
                 //Configure enemy settings
                 Enemy newEnemy = new Enemy();
-                newEnemy.score = score;
+                score -= EnemySet.BaseScore;
+
                 newEnemy.Settings = EnemySet;
+                newEnemy.score = score;
 
                 //Configure enemy player
                 newEnemy.ply = newEnemy.Settings.GetSpawn().CreatePlayer();
@@ -40,7 +42,7 @@ namespace GasStationSurvival_Script
                 newMod.CurrentHealth = newMod.MaxHealth;
                 newMod.MeleeDamageDealtModifier = score / 150f;
                 newMod.MeleeForceModifier = score / 100f;
-                newMod.SizeModifier = Math.Min((score < 100 ? 100 : score) / 100, 1.25f);
+                newMod.SizeModifier = Math.Min(Math.Max(100, score) / 100, 1.25f);
 
                 ply.SetModifiers(newMod);
 
@@ -54,14 +56,17 @@ namespace GasStationSurvival_Script
                 ply.GiveWeaponItem(wpnSet.rifleWpn);
 
                 //Configure player profile
-                IProfile profile = EnemySet.GetAltProfiles()[rnd.Next(EnemySet.GetAltProfiles().Count)];
+                IProfile profile = EnemySet.GetProfiles()[rnd.Next(EnemySet.GetProfiles().Count)];
                 ply.SetProfile(profile);
 
                 //Teleport & others
                 ply.SetWorldPosition(SpawnPoint);
                 ply.SetCameraSecondaryFocusMode(CameraFocusMode.Ignore);
                 ply.SetBotName(score.ToString());
-
+                ply.SetInputMode(PlayerInputMode.Disabled);
+                Events.UpdateCallback.Start((float e) => {
+                    ply.SetInputMode(PlayerInputMode.Enabled);
+                }, (uint)800, 1);
                 return newEnemy;
             }
         }

@@ -33,6 +33,7 @@ namespace GasStationSurvival_Script
                     {WeaponItem.ASSAULT,400}
                 };
 
+            //Conjunto de armas de um inimigo padrão
             public class WeaponSet
             {
                 public WeaponItem meleeWpn = WeaponItem.NONE;
