@@ -21,7 +21,7 @@ namespace GasStationSurvival_Script
             {
                 //Set things
                 Vector2 SpawnPoint = SpawnPoints[rnd.Next(0, SpawnPoints.Length)];
-                EnemyConfig EnemySet = EnemyScore.GetEnemyTemplateByBaseScore(score);
+                EnemyConfig EnemySet = GetEnemyConfigByChance(score);
 
                 Msg(String.Concat("Spawning new enemy. Score: ", score.ToString(), " / Set: ", EnemySet.Name), "SPAWNENEMY");
 
@@ -49,7 +49,7 @@ namespace GasStationSurvival_Script
                 //Configure player weapons
                 int wpnScore = score;
                 if (wpnScore < 0) wpnScore = 0;
-                EnemyWeapon.WeaponSet wpnSet = EnemyWeapon.GetWeaponSet(wpnScore, (float)(rnd.NextDouble() + 1), rnd.Next(-10, 10));
+                EnemyWeapon.WeaponSet wpnSet = EnemyWeapon.GetWeaponSet(wpnScore, EnemySet, rnd.Next(-10, 10));
 
                 ply.GiveWeaponItem(wpnSet.meleeWpn);
                 ply.GiveWeaponItem(wpnSet.handgunWpn);
@@ -62,7 +62,7 @@ namespace GasStationSurvival_Script
                 //Teleport & others
                 ply.SetWorldPosition(SpawnPoint);
                 ply.SetCameraSecondaryFocusMode(CameraFocusMode.Ignore);
-                ply.SetBotName(score.ToString());
+                ply.SetBotName(score.ToString() + " " + EnemySet.Name);
                 ply.SetInputMode(PlayerInputMode.Disabled);
                 Events.UpdateCallback.Start((float e) => {
                     ply.SetInputMode(PlayerInputMode.Enabled);

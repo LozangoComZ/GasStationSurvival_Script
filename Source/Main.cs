@@ -42,7 +42,9 @@ namespace GasStationSurvival_Script
 
 
         //Others
+        public static void MsgG(object s) { Game.WriteToConsole("DEBUG: " + s.ToString()); }
+        public static void MsgG(object s, string origin) { Game.WriteToConsole(origin+": "+s.ToString()); }
         public static void Msg(object s) { Game.ShowChatMessage("DEBUG: " + s.ToString()); }
-        public static void Msg(object s, string origin) { Game.ShowChatMessage(origin+": "+s.ToString()); }
+        public static void Msg(object s, string origin) { Game.ShowChatMessage(origin + ": " + s.ToString()); }
     }
 }
