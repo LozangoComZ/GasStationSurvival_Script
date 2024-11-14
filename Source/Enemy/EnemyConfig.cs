@@ -1,5 +1,6 @@
 ﻿using SFDGameScriptInterface;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace GasStationSurvival_Script
                 List<IObjectPlayerProfileInfo> altProfilesObj = new List<IObjectPlayerProfileInfo>();
                 foreach (string profId in profilesID)
                 {
-                    foreach (IObject obj in Game.GetObjectsByCustomID("PP-" + profId))
+                    foreach (IObject obj in Game.GetObjectsByCustomID("PP-" + profId.ToUpper()))
                     {
                         altProfilesObj.Add((IObjectPlayerProfileInfo)obj);
                     }
@@ -33,15 +34,25 @@ namespace GasStationSurvival_Script
             }
             public IObjectPlayerSpawnTrigger GetSpawn() { return (IObjectPlayerSpawnTrigger)Game.GetObject("SPAWNER"); }
 
+            // STATUS
+
+            public float healthMultiplier = 1;
+            public float forceMultiplier = 1;
+
+            // -1 = Score-based
+            public float baseSize = -1;
 
             // WEAPON SET
             public float meleePreference = 1;
             public float handgunPreference = 1;
             public float riflePreference = 1;
-            public static Dictionary<WeaponItem, int> specialWpns = new Dictionary<WeaponItem, int>();
+            public Dictionary<WeaponItem, int> specialWpns = new Dictionary<WeaponItem, int>();
 
             // EVENT
             public Func<Enemy, object> OnSpawn = (Enemy ec) => { return null; };
+
+            // BOT IA
+            public Func<int, BotBehaviorSet> BotIASet;
         }
 
 
@@ -53,7 +64,8 @@ namespace GasStationSurvival_Script
                 profilesID = { "DefaultMale", "DefaultFemale" },
                 meleePreference = 1f,
                 handgunPreference = 0.80f,
-                riflePreference = 0.50f,
+                riflePreference = 0.30f,
+                BotIASet = RookieIA,
             },
             new EnemyConfig
             {
@@ -62,6 +74,32 @@ namespace GasStationSurvival_Script
                 meleePreference = 0.25f,
                 handgunPreference = 1.30f,
                 riflePreference = 1.30f,
+                BotIASet = PunkIA,
+                forceMultiplier = 0.5f
+            },
+            new EnemyConfig
+            {
+                Name = "MOLOTOV",
+                profilesID = { "MOLOTOV" },
+                meleePreference = 0f,
+                handgunPreference = 1.30f,
+                riflePreference = 1.30f,
+                specialWpns = new Dictionary<WeaponItem, int>()
+                {
+                    {WeaponItem.MOLOTOVS,0}
+                },
+                BotIASet = MolotovIA
+            },
+            new EnemyConfig
+            {
+                Name = "BIG",
+                profilesID = { "BIG" },
+                meleePreference = 1.5f,
+                handgunPreference = 0,
+                riflePreference = 0,
+                BotIASet = BigIA,
+                baseSize = 1.20f,
+                forceMultiplier = 1.25f
             }
         };
         public static EnemyConfig getEnemyConfigByName(string name)
@@ -92,11 +130,13 @@ namespace GasStationSurvival_Script
                 }
             }
 
+
             if (filteredConfigChances.Count == 0 || filteredEnemyConfigs.Count == 0)
                 throw new Exception("Cannot get a valid EnemyConfig sort list");
 
-            return (EnemyConfig)DrawRandomObject(filteredEnemyConfigs.ToArray(), filteredConfigChances.ToArray());
-        }
+            var dic = filteredEnemyConfigs.Zip(filteredConfigChances, (key, value) => new { key, value }).ToDictionary(item => (object)item.key, item => (object)item.value);
 
+            return (EnemyConfig)DrawRandomObject(dic);
+        }
     }
 }

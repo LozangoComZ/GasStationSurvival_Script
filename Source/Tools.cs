@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using SFDGameScriptInterface;
@@ -11,27 +12,27 @@ namespace GasStationSurvival_Script
         {
             return Math.Abs(a - b);
         }
-        public static object DrawRandomObject(object[] items, int[] chances)
+        public static object DrawRandomObject(Dictionary<object, object> dic)
         {
             int totalChances = 0;
-            foreach (int chance in chances){
+            foreach (int chance in dic.Values)
+            {
                 totalChances += chance;
             }
 
             int rndDraw = rnd.Next(0, totalChances);
 
             int acumulador = 0;
-            foreach (int chance in chances)
+            for(int i = 0;i < dic.Values.Count;i++)
             {
-                acumulador += chance;
+                acumulador += (int)dic.Values.ToArray()[i];
                 if (rndDraw < acumulador){
-                    return items[Array.IndexOf(chances,chance)];
+                    return (object)dic.Keys.ToArray()[i];
                 }
             }
 
             //Error
-            Msg("Items length = "+items.Length.ToString());
-            Msg("Chances length = " + chances.Length.ToString());
+            
             throw new Exception("Cannot draw random object");
         }
     }

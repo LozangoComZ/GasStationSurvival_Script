@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\enemy\\enemybotia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\enemy\\enemybotia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\wave\\waveconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\wave\\waveconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\wave\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\wave\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\enemy\\enemyweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\enemy\\enemyweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\enemy\\enemyconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,8 +19,28 @@
       "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\enemy\\enemyspawn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\enemy\\enemyweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\enemy\\enemyweapon.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\checklist.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:checklist.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\wave\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\wave\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\gasstationsurvival_script.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -33,18 +49,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\enemy\\enemyscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\enemy\\enemyscore.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\enemy\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\source\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:source\\tools.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|h:\\kevin\\projects\\programming vs 2022\\gasstationsurvival_script\\checklist.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{4509DFB2-1F87-4411-BF8D-5E4D2E899446}|GasStationSurvival_Script.csproj|solutionrelative:checklist.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,37 +58,127 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EnemyBotIA.cs",
+              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyBotIA.cs",
+              "RelativeDocumentMoniker": "Source\\Enemy\\EnemyBotIA.cs",
+              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyBotIA.cs",
+              "RelativeToolTip": "Source\\Enemy\\EnemyBotIA.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T00:10:30.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnemyConfig.cs",
+              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyConfig.cs",
+              "RelativeDocumentMoniker": "Source\\Enemy\\EnemyConfig.cs",
+              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyConfig.cs",
+              "RelativeToolTip": "Source\\Enemy\\EnemyConfig.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAQwGUAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T22:33:09.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\Enemy.cs",
+              "RelativeDocumentMoniker": "Source\\Enemy\\Enemy.cs",
+              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\Enemy.cs",
+              "RelativeToolTip": "Source\\Enemy\\Enemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T22:32:50.869Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "EnemySpawn.cs",
               "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemySpawn.cs",
               "RelativeDocumentMoniker": "Source\\Enemy\\EnemySpawn.cs",
               "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemySpawn.cs",
               "RelativeToolTip": "Source\\Enemy\\EnemySpawn.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAAwwAkAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-09T22:30:08.296Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "EnemyWeapon.cs",
+              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyWeapon.cs",
+              "RelativeDocumentMoniker": "Source\\Enemy\\EnemyWeapon.cs",
+              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyWeapon.cs",
+              "RelativeToolTip": "Source\\Enemy\\EnemyWeapon.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCEAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-30T18:41:06.165Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "WaveConfig.cs",
               "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Wave\\WaveConfig.cs",
               "RelativeDocumentMoniker": "Source\\Wave\\WaveConfig.cs",
               "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Wave\\WaveConfig.cs",
               "RelativeToolTip": "Source\\Wave\\WaveConfig.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwDMAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAxwDUAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-16T23:33:32.23Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
+              "Title": "CheckList.txt",
+              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\CheckList.txt",
+              "RelativeDocumentMoniker": "CheckList.txt",
+              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\CheckList.txt",
+              "RelativeToolTip": "CheckList.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-10-16T01:28:45.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Main.cs",
+              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Main.cs",
+              "RelativeDocumentMoniker": "Source\\Main.cs",
+              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Main.cs",
+              "RelativeToolTip": "Source\\Main.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAowBwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T22:31:21.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Tools.cs",
+              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Tools.cs",
+              "RelativeDocumentMoniker": "Source\\Tools.cs",
+              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Tools.cs",
+              "RelativeToolTip": "Source\\Tools.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA4wB0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T23:28:16.833Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Wave.cs",
               "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Wave\\Wave.cs",
               "RelativeDocumentMoniker": "Source\\Wave\\Wave.cs",
@@ -92,51 +186,11 @@
               "RelativeToolTip": "Source\\Wave\\Wave.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAAAFoAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T23:33:29.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-16T23:33:29.55Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EnemyWeapon.cs",
-              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyWeapon.cs",
-              "RelativeDocumentMoniker": "Source\\Enemy\\EnemyWeapon.cs",
-              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyWeapon.cs",
-              "RelativeToolTip": "Source\\Enemy\\EnemyWeapon.cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAswEMAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-30T18:41:06.165Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "EnemyConfig.cs",
-              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyConfig.cs",
-              "RelativeDocumentMoniker": "Source\\Enemy\\EnemyConfig.cs",
-              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyConfig.cs",
-              "RelativeToolTip": "Source\\Enemy\\EnemyConfig.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAwwDMAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T22:33:09.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Main.cs",
-              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Main.cs",
-              "RelativeDocumentMoniker": "Source\\Main.cs",
-              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Main.cs",
-              "RelativeToolTip": "Source\\Main.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowCoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T22:31:21.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "GasStationSurvival_Script.txt",
               "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\GasStationSurvival_Script.txt",
               "RelativeDocumentMoniker": "Source\\GasStationSurvival_Script.txt",
@@ -144,38 +198,11 @@
               "RelativeToolTip": "Source\\GasStationSurvival_Script.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-11-09T22:30:09.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-09T22:30:09.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Enemy.cs",
-              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\Enemy.cs",
-              "RelativeDocumentMoniker": "Source\\Enemy\\Enemy.cs",
-              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\Enemy.cs",
-              "RelativeToolTip": "Source\\Enemy\\Enemy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T22:32:50.869Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Tools.cs",
-              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Tools.cs",
-              "RelativeDocumentMoniker": "Source\\Tools.cs",
-              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Tools.cs",
-              "RelativeToolTip": "Source\\Tools.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAQwCEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-08T23:28:16.833Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "EnemyScore.cs",
               "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\Source\\Enemy\\EnemyScore.cs",
               "RelativeDocumentMoniker": "Source\\Enemy\\EnemyScore.cs",
@@ -183,21 +210,7 @@
               "RelativeToolTip": "Source\\Enemy\\EnemyScore.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAQwC0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T16:21:08.384Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CheckList.txt",
-              "DocumentMoniker": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\CheckList.txt",
-              "RelativeDocumentMoniker": "CheckList.txt",
-              "ToolTip": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\CheckList.txt",
-              "RelativeToolTip": "CheckList.txt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2024-10-16T01:28:45.879Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-17T16:21:08.384Z"
             }
           ]
         }

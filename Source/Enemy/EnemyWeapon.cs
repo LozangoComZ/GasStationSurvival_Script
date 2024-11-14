@@ -10,8 +10,9 @@ namespace GasStationSurvival_Script
         public static class EnemyWeapon{
             public static Dictionary<WeaponItem, int> MeleeWpnCostDic = new Dictionary<WeaponItem, int>
                 {
-                    {WeaponItem.NONE,50},
-                    {WeaponItem.HAMMER,70},
+                    {WeaponItem.NONE,30},
+                    {WeaponItem.BOTTLE,50},
+                    {WeaponItem.HAMMER,60},
                     {WeaponItem.PIPE,80},
                     {WeaponItem.LEAD_PIPE,100},
                     {WeaponItem.BAT,110},
@@ -21,16 +22,16 @@ namespace GasStationSurvival_Script
                 {
                     {WeaponItem.NONE,50},
                     {WeaponItem.PISTOL,60},
-                    {WeaponItem.PISTOL45,100},
-                    {WeaponItem.UZI,120},
-                    {WeaponItem.MAGNUM,200}
+                    {WeaponItem.REVOLVER,100},
+                    {WeaponItem.UZI,150},
+                    {WeaponItem.SUB_MACHINEGUN,200}
                 };
             public static Dictionary<WeaponItem, int> RifleWpnCostDic = new Dictionary<WeaponItem, int>
                 {
                     {WeaponItem.NONE,100},
+                    {WeaponItem.SAWED_OFF,150},
                     {WeaponItem.SHOTGUN,200},
-                    {WeaponItem.TOMMYGUN,400},
-                    {WeaponItem.ASSAULT,400}
+                    {WeaponItem.TOMMYGUN,250}
                 };
 
             //Conjunto de armas de um inimigo padrão
@@ -39,6 +40,7 @@ namespace GasStationSurvival_Script
                 public WeaponItem meleeWpn = WeaponItem.NONE;
                 public WeaponItem handgunWpn = WeaponItem.NONE;
                 public WeaponItem rifleWpn = WeaponItem.NONE;
+                public WeaponItem specialWpn = WeaponItem.NONE;
             }
             public static WeaponSet GetWeaponSet(int score, EnemyConfig enemyConfig, int randomGap)
             {
@@ -86,6 +88,12 @@ namespace GasStationSurvival_Script
                 foreach (Action act in sortedBuy){
                     act();
                 }
+
+                if(enemyConfig.specialWpns.Keys.Count > 0) {
+                    var special = enemyConfig.specialWpns.OrderBy(x => GetDifference(x.Value, (currentScore * riflePreference) + randomGap)).First();
+                    weaponSet.specialWpn = special.Key;
+                }
+                
 
                 return weaponSet;
             }

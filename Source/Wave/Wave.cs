@@ -29,8 +29,8 @@ namespace GasStationSurvival_Script
             //INICIA A ONDA
             public static void ManualSetup(int WAVEINDEX)
             {
-                Msg("Setting wave", "WAVEMANAGER");
-                if (Wave.Settings != null) { Msg("Already started.", "WAVEMANAGER"); return; }
+                MsgG("Setting wave", "WAVEMANAGER");
+                if (Wave.Settings != null) { MsgG("Already started.", "WAVEMANAGER"); return; }
 
                 Wave.Settings = WaveConfigList[WAVEINDEX-1];
             }
@@ -42,7 +42,7 @@ namespace GasStationSurvival_Script
                 if ((AllEnemiesIsDead() && IsFinalSession()) || AllPlayersIsDead())
                 {
 
-                    Msg("Ending wave", "WAVEMANAGER");
+                    MsgG("Ending wave", "WAVEMANAGER");
                     Game.SetGameOver();
                     return true;
                 }
@@ -59,7 +59,7 @@ namespace GasStationSurvival_Script
 
                 //Chegou no fim das sessões?
                 if (IsFinalSession()){
-                    Msg("All spawn session are already spawned", "WAVEMANAGER");
+                    MsgG("All spawn session are already spawned", "WAVEMANAGER");
                     return false;
                 }
 
@@ -70,7 +70,7 @@ namespace GasStationSurvival_Script
             private static void SpawnSessionEnemies()
             {
                 //Start spawning enemies
-                Msg("Spawning enemy session", "WAVEMANAGER");
+                MsgG("Spawning enemy session", "WAVEMANAGER");
 
                 int[] ScorePerEnemy = EnemyScore.ShareScore(CurrentSession().EnemyUnits,CurrentSession().ScorePerEnemy * CurrentSession().EnemyUnits,CurrentSession().ScoreConcentration,100);
 

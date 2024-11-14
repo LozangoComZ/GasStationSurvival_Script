@@ -16,7 +16,7 @@ namespace GasStationSurvival_Script
                 //Passo 0: Separar o minimo para cada individuo
                 int minScore = 20;
                 int reservedScore = minScore * enemyCount;
-                if (initScore < reservedScore) { Msg("Error: Session has insufficient score", "SHARESCORE"); return null; }
+                if (initScore < reservedScore) { MsgG("Error: Session has insufficient score", "SHARESCORE"); return null; }
 
                 int score = initScore - reservedScore;
 

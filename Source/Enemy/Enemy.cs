@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using SFDGameScriptInterface;
 
@@ -8,6 +9,11 @@ namespace GasStationSurvival_Script
     {
         public class Enemy
         {
+            public Enemy(EnemyConfig ec)
+            {
+                ply = ec.GetSpawn().CreatePlayer();
+                EnemyByIPlayer.Add(ply, this);
+            }
             public IPlayer ply;
             public int score;
             public EnemyConfig Settings;
@@ -18,10 +24,12 @@ namespace GasStationSurvival_Script
             if (enemy.Settings == null) return;
 
             Game.TotalScore += enemy.score;
-            Msg("New score: " + Game.TotalScore.ToString(), "ONENEMYDEATH");
+            MsgG("New score: " + Game.TotalScore.ToString(), "ONENEMYDEATH");
 
             WaveManager.TryNextSession();
             WaveManager.GameOverCheck();
         }
+
+        public static Dictionary<IPlayer, Enemy> EnemyByIPlayer = new Dictionary<IPlayer, Enemy>() { };
     }
 }

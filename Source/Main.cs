@@ -14,12 +14,14 @@ namespace GasStationSurvival_Script
 
 
         public static Random rnd = new Random();
-        Events.PlayerDeathCallback m_playerDeathEvent = null;
+        public static Events.PlayerDeathCallback m_playerDeathEvent = null;
+        public static Events.PlayerMeleeActionCallback m_playerMeleeActionEvent = null;
 
         public void OnStartup()
         {
             //Events
             m_playerDeathEvent = Events.PlayerDeathCallback.Start(OnPlayerDeath);
+            m_playerMeleeActionEvent = Events.PlayerMeleeActionCallback.Start(OnPlayerMeleeAction);
 
             //Setup Wave
             WaveManager.ManualSetup(Game.SurvivalWave);
@@ -40,11 +42,44 @@ namespace GasStationSurvival_Script
             WaveManager.GameOverCheck();
         }
 
+        public void OnPlayerMeleeAction(IPlayer player, PlayerMeleeHitArg[] args)
+        {
+            if (!EnemyByIPlayer.ContainsKey(player)) return;
+            Enemy enemy = EnemyByIPlayer[player];
+            int score = enemy.score;
 
+            //Calculate delay interval
+            int interval = (300 / score) * 400;
+
+            if (interval < 200) return;
+
+            var status = "COOLDOWN";
+            foreach(PlayerMeleeHitArg arg in args)
+            {
+                if (arg.IsPlayer) if (((IPlayer)arg.HitObject).IsBlocking) {
+                    interval *= 3;
+                    status = "STUNNED";
+                    Game.PlayEffect("Smack", player.GetWorldPosition() + new Vector2(0, 10));
+                }
+
+            }
+
+            //Delay application
+            var name = player.Name;
+            player.SetInputMode(PlayerInputMode.Disabled);
+            player.SetBotName(status);
+            Events.UpdateCallback.Start((float e) => {
+                if (!player.IsDead){
+                    player.SetInputMode(PlayerInputMode.Enabled);
+                    player.SetBotName(name);
+                }
+            }, (uint)(interval), 1);
+        }
         //Others
-        public static void MsgG(object s) { Game.WriteToConsole("DEBUG: " + s.ToString()); }
+        /*public static void MsgG(object s) { Game.WriteToConsole("DEBUG: " + s.ToString()); }
         public static void MsgG(object s, string origin) { Game.WriteToConsole(origin+": "+s.ToString()); }
-        public static void Msg(object s) { Game.ShowChatMessage("DEBUG: " + s.ToString()); }
-        public static void Msg(object s, string origin) { Game.ShowChatMessage(origin + ": " + s.ToString()); }
+        */
+        public static void MsgG(object s) { Game.ShowChatMessage("DEBUG: " + s.ToString()); }
+        public static void MsgG(object s, string origin) { Game.ShowChatMessage(origin + ": " + s.ToString()); }
     }
 }

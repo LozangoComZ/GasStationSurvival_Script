@@ -47,9 +47,11 @@ namespace GasStationSurvival_Script
                 return new EnemySpawnChance(
                     new EnemyConfig[] {     
                         getEnemyConfigByName("ROOKIE"),
-                        getEnemyConfigByName("PUNK")
+                        getEnemyConfigByName("PUNK"),
+                        getEnemyConfigByName("MOLOTOV"),
+                        getEnemyConfigByName("BIG")
                     }
-                    , new int[] { 1 , 1}, new int[] { 0 , 50}); 
+                    , new int[] { 10 , 10,  6,  3}, new int[] { 0 , 60, 80, 80}); 
             } 
         }        //
 
@@ -59,18 +61,23 @@ namespace GasStationSurvival_Script
                 SessionsArray ={
                     new WaveConfig.Session(){
                     EnemyUnits=4,
-                    ScorePerEnemy=50,
-                    ScoreConcentration=1.5
+                    ScorePerEnemy=40,
+                    ScoreConcentration=1
                     },
                     new WaveConfig.Session(){
                     EnemyUnits=4,
                     ScorePerEnemy=80,
-                    ScoreConcentration=1.5
+                    ScoreConcentration=1.25
                     },
                     new WaveConfig.Session(){
                     EnemyUnits=4,
                     ScorePerEnemy=100,
                     ScoreConcentration=1.5
+                    },
+                    new WaveConfig.Session(){
+                    EnemyUnits=4,
+                    ScorePerEnemy=130,
+                    ScoreConcentration=2
                     },
                 },
                 enemySpawnChance = SpawnChance0,

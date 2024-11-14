@@ -23,26 +23,25 @@ namespace GasStationSurvival_Script
                 Vector2 SpawnPoint = SpawnPoints[rnd.Next(0, SpawnPoints.Length)];
                 EnemyConfig EnemySet = GetEnemyConfigByChance(score);
 
-                Msg(String.Concat("Spawning new enemy. Score: ", score.ToString(), " / Set: ", EnemySet.Name), "SPAWNENEMY");
+                MsgG(String.Concat("Spawning new enemy. Score: ", score.ToString(), " / Set: ", EnemySet.Name), "SPAWNENEMY");
 
                 //Configure enemy settings
-                Enemy newEnemy = new Enemy();
+                Enemy newEnemy = new Enemy(EnemySet);
                 score -= EnemySet.BaseScore;
 
                 newEnemy.Settings = EnemySet;
                 newEnemy.score = score;
 
                 //Configure enemy player
-                newEnemy.ply = newEnemy.Settings.GetSpawn().CreatePlayer();
                 IPlayer ply = newEnemy.ply;
 
                 //Configure player status
                 PlayerModifiers newMod = ply.GetModifiers();
-                newMod.MaxHealth = (int)(score / 2);
+                newMod.MaxHealth = (int)((score / 2) * EnemySet.healthMultiplier);
                 newMod.CurrentHealth = newMod.MaxHealth;
                 newMod.MeleeDamageDealtModifier = score / 150f;
-                newMod.MeleeForceModifier = score / 100f;
-                newMod.SizeModifier = Math.Min(Math.Max(100, score) / 100, 1.25f);
+                newMod.MeleeForceModifier = (score / 180f) * EnemySet.forceMultiplier;
+                newMod.SizeModifier = EnemySet.baseSize;
 
                 ply.SetModifiers(newMod);
 
@@ -54,10 +53,14 @@ namespace GasStationSurvival_Script
                 ply.GiveWeaponItem(wpnSet.meleeWpn);
                 ply.GiveWeaponItem(wpnSet.handgunWpn);
                 ply.GiveWeaponItem(wpnSet.rifleWpn);
+                ply.GiveWeaponItem(wpnSet.specialWpn);
 
                 //Configure player profile
                 IProfile profile = EnemySet.GetProfiles()[rnd.Next(EnemySet.GetProfiles().Count)];
                 ply.SetProfile(profile);
+
+                //BotIA
+                ply.SetBotBehaviorSet(EnemySet.BotIASet(score));
 
                 //Teleport & others
                 ply.SetWorldPosition(SpawnPoint);
