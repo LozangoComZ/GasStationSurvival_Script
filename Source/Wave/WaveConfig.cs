@@ -17,13 +17,12 @@ namespace GasStationSurvival_Script
                 public int EnemyUnits = 0;              //Quantidade de inimigos
                 public int ScorePerEnemy = 0;           //Dificuldade distribuida entre todos os inimigos
                 public double ScoreConcentration = 0;   //Concentração dos pontos nos inimigos. (0 = Distribuido igualmente; 1 = Distribui minimamente)
+                public EnemySpawnChance enemySpawnChance = SpawnChance0;
             }
 
             public List<Session> SessionsArray =    //*Será usada de index 0 até o final durante a leitura numa Wave.
             new List<Session>{
             };
-
-            public EnemySpawnChance enemySpawnChance;
         }
 
         //
@@ -51,7 +50,7 @@ namespace GasStationSurvival_Script
                         getEnemyConfigByName("MOLOTOV"),
                         getEnemyConfigByName("BIG")
                     }
-                    , new int[] { 10 , 10,  6,  3}, new int[] { 0 , 60, 80, 80}); 
+                    , new int[] { 10 , 10,  6,  100}, new int[] { 0 , 60, 80, 80}); 
             } 
         }        //
 
@@ -60,27 +59,30 @@ namespace GasStationSurvival_Script
             new WaveConfig(){ //0
                 SessionsArray ={
                     new WaveConfig.Session(){
-                    EnemyUnits=4,
-                    ScorePerEnemy=40,
-                    ScoreConcentration=1
+                    EnemyUnits=1,
+                    ScorePerEnemy=100,
+                    ScoreConcentration=1,
+                    enemySpawnChance = SpawnChance0,
                     },
                     new WaveConfig.Session(){
                     EnemyUnits=4,
                     ScorePerEnemy=80,
-                    ScoreConcentration=1.25
+                    ScoreConcentration=1.25,
+                    enemySpawnChance = SpawnChance0,
                     },
                     new WaveConfig.Session(){
                     EnemyUnits=4,
                     ScorePerEnemy=100,
-                    ScoreConcentration=1.5
+                    ScoreConcentration=1.5,
+                    enemySpawnChance = SpawnChance0,
                     },
                     new WaveConfig.Session(){
                     EnemyUnits=4,
                     ScorePerEnemy=130,
-                    ScoreConcentration=2
+                    ScoreConcentration=2,
+                    enemySpawnChance = SpawnChance0,
                     },
                 },
-                enemySpawnChance = SpawnChance0,
             },//Default
 
         };

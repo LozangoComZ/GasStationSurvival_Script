@@ -98,8 +98,9 @@ namespace GasStationSurvival_Script
                 handgunPreference = 0,
                 riflePreference = 0,
                 BotIASet = BigIA,
-                baseSize = 1.20f,
-                forceMultiplier = 1.25f
+                baseSize = 1.10f,
+                forceMultiplier = 1.25f,
+                healthMultiplier = 1.5f
             }
         };
         public static EnemyConfig getEnemyConfigByName(string name)
@@ -112,7 +113,7 @@ namespace GasStationSurvival_Script
         }
         public static EnemyConfig GetEnemyConfigByChance(float score)
         {
-            EnemySpawnChance enemySpawnChance = Wave.Settings.enemySpawnChance;
+            EnemySpawnChance enemySpawnChance = WaveManager.CurrentSession().enemySpawnChance;
             List<EnemyConfig> enemyConfigs = enemySpawnChance.enemyConfigs;
             List<int> configsMinScore = enemySpawnChance.configsMinScore;
             List<int> configsChance = enemySpawnChance.configsChance;

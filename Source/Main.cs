@@ -49,20 +49,19 @@ namespace GasStationSurvival_Script
             int score = enemy.score;
 
             //Calculate delay interval
-            int interval = (300 / score) * 400;
-
-            if (interval < 200) return;
+            int interval = (200 / score) * 200;
 
             var status = "COOLDOWN";
             foreach(PlayerMeleeHitArg arg in args)
             {
                 if (arg.IsPlayer) if (((IPlayer)arg.HitObject).IsBlocking) {
-                    interval *= 3;
+                    interval *= 2;
                     status = "STUNNED";
                     Game.PlayEffect("Smack", player.GetWorldPosition() + new Vector2(0, 10));
                 }
 
             }
+            if (interval < 200) return;
 
             //Delay application
             var name = player.Name;
