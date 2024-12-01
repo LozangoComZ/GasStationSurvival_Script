@@ -23,7 +23,7 @@ namespace GasStationSurvival_Script
                     {WeaponItem.NONE,50},
                     {WeaponItem.PISTOL,60},
                     {WeaponItem.REVOLVER,100},
-                    {WeaponItem.UZI,150},
+                    {WeaponItem.UZI,200},
                     {WeaponItem.SUB_MACHINEGUN,200}
                 };
             public static Dictionary<WeaponItem, int> RifleWpnCostDic = new Dictionary<WeaponItem, int>

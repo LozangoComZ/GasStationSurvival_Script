@@ -22,7 +22,7 @@ namespace GasStationSurvival_Script
         public static void OnEnemyDeath(Enemy enemy, PlayerDeathArgs args)
         {
             if (enemy.Settings == null) return;
-
+            enemy.Settings.OnDeath(enemy);
             Game.TotalScore += enemy.score;
             MsgG("New score: " + Game.TotalScore.ToString(), "ONENEMYDEATH");
 

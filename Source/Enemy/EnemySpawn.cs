@@ -42,6 +42,7 @@ namespace GasStationSurvival_Script
                 newMod.MeleeDamageDealtModifier = score / 150f;
                 newMod.MeleeForceModifier = (score / 180f) * EnemySet.forceMultiplier;
                 newMod.SizeModifier = EnemySet.baseSize;
+                newMod.MaxEnergy = (int)(100 * EnemySet.energyMultiplier);
 
                 ply.SetModifiers(newMod);
 

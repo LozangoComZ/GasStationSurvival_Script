@@ -9,7 +9,7 @@ namespace GasStationSurvival_Script
 {
     public partial class Main : GameScriptInterface
     {
-        public class EnemyConfig
+        public partial class EnemyConfig
         {
             // ENEMY CORE
             public string Name = "Debug";
@@ -38,6 +38,7 @@ namespace GasStationSurvival_Script
 
             public float healthMultiplier = 1;
             public float forceMultiplier = 1;
+            public float energyMultiplier = 1;
 
             // -1 = Score-based
             public float baseSize = -1;
@@ -49,7 +50,9 @@ namespace GasStationSurvival_Script
             public Dictionary<WeaponItem, int> specialWpns = new Dictionary<WeaponItem, int>();
 
             // EVENT
-            public Func<Enemy, object> OnSpawn = (Enemy ec) => { return null; };
+            public Action<Enemy> OnSpawn = (Enemy ec) => { };
+            public Action<Enemy> OnDeath = (Enemy ec) => { };
+
 
             // BOT IA
             public Func<int, BotBehaviorSet> BotIASet;
@@ -89,6 +92,25 @@ namespace GasStationSurvival_Script
                     {WeaponItem.MOLOTOVS,0}
                 },
                 BotIASet = MolotovIA
+            },
+            new EnemyConfig
+            {
+                Name = "SUICIDE",
+                profilesID = { "SUICIDE" },
+                meleePreference = 0.5f,
+                handgunPreference = 0.5f,
+                riflePreference = 0,
+                energyMultiplier = 1.50f,
+                healthMultiplier = 0.25f,
+                forceMultiplier = 0.25f,
+                BotIASet = SuicideIA,
+                OnDeath = (Enemy ec) =>
+                {
+                    new Timer(3, ec.ply, () =>
+                    {
+                        Game.TriggerExplosion( ec.ply.GetWorldPosition() );
+                    });
+                }
             },
             new EnemyConfig
             {

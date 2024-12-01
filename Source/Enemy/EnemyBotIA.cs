@@ -25,7 +25,11 @@ namespace GasStationSurvival_Script
         public static Func<int, BotBehaviorSet> RookieIA = (int score) =>
         {
             BotBehaviorSet bbs = GenericIA(score);
-            bbs.RangedWeaponAccuracy = score / 500;
+            bbs.RangedWeaponAccuracy = score / 400;
+            bbs.RangedWeaponAimShootDelayMax = (300 / score) * 1500;
+            bbs.RangedWeaponAimShootDelayMin = bbs.RangedWeaponAimShootDelayMax - 500;
+            bbs.RangedWeaponBurstPauseMax = bbs.RangedWeaponAimShootDelayMax / 3;
+            bbs.RangedWeaponBurstPauseMin = bbs.RangedWeaponAimShootDelayMin / 3;
             bbs.DefensiveAvoidProjectilesLevel = Math.Min(score / 200, 1f);
             bbs.OffensiveSprintLevel = Math.Min(score / 150, 0.8f);
             bbs.SetMeleeActionsToEasy();
@@ -94,6 +98,18 @@ namespace GasStationSurvival_Script
             bbs.OffensiveClimbingLevel = 1;
             bbs.OffensiveEnrageLevel = 1;
             bbs.OffensiveSprintLevel = 1;
+            return bbs;
+        };
+
+        public static Func<int, BotBehaviorSet> SuicideIA = (int score) =>
+        {
+            BotBehaviorSet bbs = RookieIA(score/2);
+            bbs.RangedWeaponAccuracy = 0.5f;
+            bbs.DefensiveAvoidProjectilesLevel = 0;
+            bbs.OffensiveSprintLevel = 1;
+            bbs.OffensiveDiveLevel = 1;
+            bbs.OffensiveClimbingLevel = 1;
+            bbs.OffensiveEnrageLevel = 1;
             return bbs;
         };
     }
