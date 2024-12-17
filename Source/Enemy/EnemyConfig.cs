@@ -93,16 +93,18 @@ namespace GasStationSurvival_Script
                 },
                 BotIASet = MolotovIA
             },
+
+            //"so vai aparecer depois da wave do boss de flamethrower (na wave do boss e posteriores)"
             new EnemyConfig
             {
                 Name = "SUICIDE",
                 profilesID = { "SUICIDE" },
-                meleePreference = 0.5f,
-                handgunPreference = 0.5f,
+                meleePreference = 0,
+                handgunPreference = 0,
                 riflePreference = 0,
                 energyMultiplier = 1.50f,
                 healthMultiplier = 0.25f,
-                forceMultiplier = 0.25f,
+                forceMultiplier = 0.5f,
                 BotIASet = SuicideIA,
                 OnDeath = (Enemy ec) =>
                 {

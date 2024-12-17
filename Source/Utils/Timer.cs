@@ -39,7 +39,7 @@ namespace GasStationSurvival_Script
                     delayRemain -= 1;
                     text.SetText(delayRemain.ToString());
                 };
-
+                /*
                 Events.UpdateCallback m_colorTick = null;
                 bool y = false;
                 Action<float> colorTick = (float f) => {
@@ -54,18 +54,18 @@ namespace GasStationSurvival_Script
                         text.SetTextColor(Color.Red);
                     }
                 };
-
+                */
                 stop = () =>
                 {
                     m_followObjTick.Stop();
                     m_timerTick.Stop();
-                    m_colorTick.Stop();
+                    //m_colorTick.Stop();
                     text.Remove();
                 };
 
                 m_timerTick = Events.UpdateCallback.Start(timerTick, 1000);
                 m_followObjTick = Events.UpdateCallback.Start(followObjTick, 200);
-                m_colorTick = Events.UpdateCallback.Start(colorTick, 200);
+                //m_colorTick = Events.UpdateCallback.Start(colorTick, 200);
             }
 
             public int delayRemain = -1;

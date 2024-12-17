@@ -106,7 +106,7 @@ namespace GasStationSurvival_Script
             BotBehaviorSet bbs = RookieIA(score/2);
             bbs.RangedWeaponAccuracy = 0.5f;
             bbs.DefensiveAvoidProjectilesLevel = 0;
-            bbs.OffensiveSprintLevel = 1;
+            bbs.OffensiveSprintLevel = 0;
             bbs.OffensiveDiveLevel = 1;
             bbs.OffensiveClimbingLevel = 1;
             bbs.OffensiveEnrageLevel = 1;

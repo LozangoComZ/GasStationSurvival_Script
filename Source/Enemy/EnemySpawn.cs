@@ -39,7 +39,7 @@ namespace GasStationSurvival_Script
                 PlayerModifiers newMod = ply.GetModifiers();
                 newMod.MaxHealth = (int)((score / 2) * EnemySet.healthMultiplier);
                 newMod.CurrentHealth = newMod.MaxHealth;
-                newMod.MeleeDamageDealtModifier = score / 150f;
+                newMod.MeleeDamageDealtModifier = (score / 150f) * EnemySet.forceMultiplier;
                 newMod.MeleeForceModifier = (score / 180f) * EnemySet.forceMultiplier;
                 newMod.SizeModifier = EnemySet.baseSize;
                 newMod.MaxEnergy = (int)(100 * EnemySet.energyMultiplier);

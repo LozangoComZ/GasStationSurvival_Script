@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GasStationSurvival_Script")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+655a780e4333ad7fae63d8ceac18cadf0fec2f9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05e8a120aea79d20dee2353a0621d63a98938c52")]
 [assembly: System.Reflection.AssemblyProductAttribute("GasStationSurvival_Script")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GasStationSurvival_Script")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

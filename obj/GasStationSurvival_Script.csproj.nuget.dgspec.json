@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\GasStationSurvival_Script.csproj": {}
+    "H:\\Kevin\\PROJECTS\\ProgrammingVS2022\\GasStationSurvival_Script\\GasStationSurvival_Script.csproj": {}
   },
   "projects": {
-    "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\GasStationSurvival_Script.csproj": {
+    "H:\\Kevin\\PROJECTS\\ProgrammingVS2022\\GasStationSurvival_Script\\GasStationSurvival_Script.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\GasStationSurvival_Script.csproj",
+        "projectUniqueName": "H:\\Kevin\\PROJECTS\\ProgrammingVS2022\\GasStationSurvival_Script\\GasStationSurvival_Script.csproj",
         "projectName": "GasStationSurvival_Script",
-        "projectPath": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\GasStationSurvival_Script.csproj",
+        "projectPath": "H:\\Kevin\\PROJECTS\\ProgrammingVS2022\\GasStationSurvival_Script\\GasStationSurvival_Script.csproj",
         "packagesPath": "C:\\Users\\edfrazao\\.nuget\\packages\\",
-        "outputPath": "H:\\Kevin\\PROJECTS\\Programming VS 2022\\GasStationSurvival_Script\\obj\\",
+        "outputPath": "H:\\Kevin\\PROJECTS\\ProgrammingVS2022\\GasStationSurvival_Script\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\edfrazao\\AppData\\Roaming\\NuGet\\NuGet.Config"
