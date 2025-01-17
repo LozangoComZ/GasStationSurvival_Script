@@ -19,14 +19,20 @@ namespace GasStationSurvival_Script
 
         public void OnStartup()
         {
-            //Events
-            m_playerDeathEvent = Events.PlayerDeathCallback.Start(OnPlayerDeath);
-            m_playerMeleeActionEvent = Events.PlayerMeleeActionCallback.Start(OnPlayerMeleeAction);
+            Action waveStarter = () =>
+            {
+                //Events
+                m_playerDeathEvent = Events.PlayerDeathCallback.Start(OnPlayerDeath);
+                m_playerMeleeActionEvent = Events.PlayerMeleeActionCallback.Start(OnPlayerMeleeAction);
 
-            //Setup Wave
-            WaveManager.ManualSetup(Game.SurvivalWave);
-            EnemySpawn.RefreshSpawnPoints();
-            WaveManager.TryNextSession();
+                //Setup Wave
+                WaveManager.ManualSetup(Game.SurvivalWave);
+                EnemySpawn.RefreshSpawnPoints();
+                WaveManager.TryNextSession();
+            };
+
+            Boss1_1Cutscene(waveStarter);
+
         }
 
         public void OnPlayerDeath(IPlayer player, PlayerDeathArgs args)
