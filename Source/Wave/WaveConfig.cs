@@ -18,8 +18,8 @@ namespace GasStationSurvival_Script
                 public int ScorePerEnemy = 0;           //Dificuldade distribuida entre todos os inimigos
                 public double ScoreConcentration = 0;   //Concentração dos pontos nos inimigos. (0 = Distribuido igualmente; 1 = Distribui minimamente)
                 public EnemySpawnChance enemySpawnChance = SpawnChanceInitial;
-                
-                public string Cutscene = "";
+
+                public BossConfig Boss;
             }
 
             public List<Session> SessionsArray = new List<Session>{};//*Será usada o index durante a leitura numa Wave.
@@ -32,10 +32,22 @@ namespace GasStationSurvival_Script
             new WaveConfig(){ //0
                 SessionsArray ={
                     new WaveConfig.Session(){
-                    EnemyUnits=1,
-                    ScorePerEnemy=250,
-                    ScoreConcentration=1,
-                    enemySpawnChance = SpawnChanceMiddle,
+                    EnemyUnits=3,
+                    ScorePerEnemy=90,
+                    ScoreConcentration=0.5,
+                    enemySpawnChance = SpawnChanceInitial,
+                    },
+                    new WaveConfig.Session(){
+                    EnemyUnits=3,
+                    ScorePerEnemy=100,
+                    ScoreConcentration=0.5,
+                    enemySpawnChance = SpawnChanceInitial,
+                    },
+                    new WaveConfig.Session(){
+                    EnemyUnits=3,
+                    ScorePerEnemy=120,
+                    ScoreConcentration=0.5,
+                    enemySpawnChance = SpawnChanceInitial,
                     },
                 },
             },//Default

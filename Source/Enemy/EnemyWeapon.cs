@@ -14,22 +14,22 @@ namespace GasStationSurvival_Script
                     {WeaponItem.BOTTLE,50},
                     {WeaponItem.HAMMER,60},
                     {WeaponItem.PIPE,80},
-                    {WeaponItem.LEAD_PIPE,100},
-                    {WeaponItem.BAT,110},
-                    {WeaponItem.CHAIN,150},
+                    {WeaponItem.LEAD_PIPE,140},
+                    {WeaponItem.BAT,150},
+                    {WeaponItem.CHAIN,200},
                 };
             public static Dictionary<WeaponItem, int> HandgunWpnCostDic = new Dictionary<WeaponItem, int>
                 {
                     {WeaponItem.NONE,50},
                     {WeaponItem.PISTOL,60},
-                    {WeaponItem.REVOLVER,100},
-                    {WeaponItem.UZI,200},
-                    {WeaponItem.SUB_MACHINEGUN,200}
+                    {WeaponItem.REVOLVER,130},
+                    {WeaponItem.UZI,240},
+                    {WeaponItem.SUB_MACHINEGUN,260}
                 };
             public static Dictionary<WeaponItem, int> RifleWpnCostDic = new Dictionary<WeaponItem, int>
                 {
                     {WeaponItem.NONE,100},
-                    {WeaponItem.SAWED_OFF,150},
+                    {WeaponItem.SAWED_OFF,180},
                     {WeaponItem.SHOTGUN,200},
                     {WeaponItem.TOMMYGUN,250}
                 };

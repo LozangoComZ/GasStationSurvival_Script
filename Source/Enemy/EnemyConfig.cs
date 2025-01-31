@@ -7,8 +7,9 @@ using System.Linq;
 
 namespace GasStationSurvival_Script
 {
-    public partial class Main : GameScriptInterface
+    public partial class Main: GameScriptInterface
     {
+        
         public partial class EnemyConfig
         {
             // ENEMY CORE
@@ -50,8 +51,8 @@ namespace GasStationSurvival_Script
             public Dictionary<WeaponItem, int> specialWpns = new Dictionary<WeaponItem, int>();
 
             // EVENT
-            public Action<Enemy> OnSpawn = (Enemy ec) => { };
-            public Action<Enemy> OnDeath = (Enemy ec) => { };
+            public Action<Enemy> OnSpawn = (Enemy e) => { };
+            public Action<Enemy> OnDeath = (Enemy e) => { };
 
 
             // BOT IA
@@ -75,8 +76,8 @@ namespace GasStationSurvival_Script
                 Name = "PUNK",
                 profilesID = { "DefaultMale", "DefaultFemale" },
                 meleePreference = 0.25f,
-                handgunPreference = 1.30f,
-                riflePreference = 1.30f,
+                handgunPreference = 1.25f,
+                riflePreference = 1.25f,
                 BotIASet = PunkIA,
                 forceMultiplier = 0.5f
             },

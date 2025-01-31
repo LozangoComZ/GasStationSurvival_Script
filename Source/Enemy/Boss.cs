@@ -9,7 +9,6 @@ namespace GasStationSurvival_Script
     {
         public class BossConfig : EnemyConfig
         {
-
         }
     }
 }
